@@ -7,11 +7,10 @@ public class myForthClass {
         //Задача 1
         System.out.println("1) введите стороны прямоугольника m и n: ");
         System.out.print("сторона m=");
-        Scanner scan11 = new Scanner(System.in);
-        int m = scan11.nextInt();
+        Scanner scan1 = new Scanner(System.in);
+        int m = scan1.nextInt();
         System.out.print("сторона n=");
-        Scanner scan12 = new Scanner(System.in);
-        int n = scan12.nextInt();
+        int n = scan1.nextInt();
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.print("8");
@@ -31,12 +30,10 @@ public class myForthClass {
 
         //Задача 3
         System.out.println("3) Введите три числа:");
-        Scanner scan31 = new Scanner(System.in);
-        int num1 = scan31.nextInt();
-        Scanner scan32 = new Scanner(System.in);
-        int num2 = scan32.nextInt();
-        Scanner scan33 = new Scanner(System.in);
-        int num3 = scan33.nextInt();
+        Scanner scan3 = new Scanner(System.in);
+        int num1 = scan3.nextInt();
+        int num2 = scan3.nextInt();
+        int num3 = scan3.nextInt();
         System.out.print("Среднее из них: ");
         if (num1 == num2 && num2 == num3) {
             System.out.println(num1);
@@ -70,18 +67,15 @@ public class myForthClass {
 
         //Задача 5
         System.out.println("5) Введите имя: ");
-        Scanner scan51 = new Scanner(System.in);
-        String name = scan51.nextLine();
+        Scanner scan5 = new Scanner(System.in);
+        String name = scan5.nextLine();
         System.out.println("Введите дату рождения (год, месяц, день): ");
         System.out.print("год=");
-        Scanner scan52 = new Scanner(System.in);
-        short y1 = scan52.nextShort();
+        short y1 = scan5.nextShort();
         System.out.print("месяц=");
-        Scanner scan53 = new Scanner(System.in);
-        byte m1 = scan53.nextByte();
+        byte m1 = scan5.nextByte();
         System.out.print("день=");
-        Scanner scan54 = new Scanner(System.in);
-        byte d1 = scan54.nextByte();
+        byte d1 = scan5.nextByte();
         System.out.println("Меня зовут " + name + ".\n" + "Я родился " + d1 + "." + m1 + "." + y1);
     }
 }
