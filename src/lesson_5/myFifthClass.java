@@ -15,7 +15,7 @@ public class myFifthClass {
             mas1[i] = scan1.nextLine();
         }
         System.out.println("Массив из " + mas1.length + " строк в обратном порядке:");
-        for (int i = mas1.length-1; i >= 0; i--) {
+        for (int i = mas1.length - 1; i >= 0; i--) {
             System.out.println(mas1[i]);
         }
 
