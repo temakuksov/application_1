@@ -14,8 +14,8 @@ public class myFifthClass {
         for (int i = 0; i < 8; i++) {
             mas1[i] = scan1.nextLine();
         }
-        System.out.println("Массив из " + mas1.length + " строк:");
-        for (int i = 0; i < mas1.length; i++) {
+        System.out.println("Массив из " + mas1.length + " строк в обратном порядке:");
+        for (int i = mas1.length-1; i >= 0; i--) {
             System.out.println(mas1[i]);
         }
 
@@ -43,7 +43,7 @@ public class myFifthClass {
         Scanner scan3 = new Scanner(System.in);
         for (int i = 0; i < mas31.length; i++) {
             mas31[i] = scan3.nextLine();
-            mas32[i]= mas31[i].length();
+            mas32[i] = mas31[i].length();
         }
         System.out.println("Массив длин строк:");
         for (int i = 0; i < mas32.length; i++) {
@@ -102,7 +102,7 @@ public class myFifthClass {
                 minval = mas6[i];
             }
         }
-        System.out.println("Максимальное и минимальное числа соответсвенно:"+maxval+" "+minval);
+        System.out.println("Максимальное и минимальное числа соответсвенно:" + maxval + " " + minval);
 
         // Задача 7
         System.out.println("7)-------------------------------------------------------");
