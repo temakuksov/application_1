@@ -49,9 +49,10 @@ public class myFifthClass {
         for (int i = 0; i < mas32.length; i++) {
             System.out.print(mas32[i] + " ");
         }
+        System.out.println();
 
         // Задача 4
-        System.out.println("\n4)-------------------------------------------------------");
+        System.out.println("4)-------------------------------------------------------");
         int[] mas4 = new int[10];
         System.out.println("Введите элементы массива (10 чисел):");
         Scanner scan4 = new Scanner(System.in);
