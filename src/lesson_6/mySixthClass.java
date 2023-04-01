@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class mySixthClass {
     public static void main(String[] args) {
+
         // Задача 1
         // Удвоил строку если чётное число букв, строка удваивается, утроил если нечётное
         // и одновременно конвертировал строки в верхний регистр
-
         System.out.println("1)-------------------------------------------------------");
         String[] mas1 = new String[100];
         String str;
