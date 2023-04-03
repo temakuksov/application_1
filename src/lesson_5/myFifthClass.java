@@ -113,10 +113,10 @@ public class myFifthClass {
             mas7[i] = scan7.nextInt();
         }
         int val;
-        // сортитовка массива по возрастанию, хотя можно было так Arrays.sort(mas7);
+        // сортитовка массива по убывнию, хотя можно было так Arrays.sort(mas7) и вывести в отратном порядке;
         for (int i = 0; i < mas7.length - 1; i++) {
             for (int j = 1; j < mas7.length - i; j++) {
-                if (mas7[j - 1] > mas7[j]) {
+                if (mas7[j - 1] < mas7[j]) {
                     val = mas7[j];
                     mas7[j] = mas7[j - 1];
                     mas7[j - 1] = val;
@@ -124,9 +124,8 @@ public class myFifthClass {
             }
         }
         System.out.println("Элементы массива в убывающем порядке:");
-        for (int i = mas7.length - 1; i >= 0; i--) {
-            System.out.print(mas7[i] + " ");
-        }
+        System.out.println(Arrays.toString(mas7));
+
 
     }
 }
