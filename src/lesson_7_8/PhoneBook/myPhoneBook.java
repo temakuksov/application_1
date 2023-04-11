@@ -50,6 +50,5 @@ public class myPhoneBook {
         contactList.printContactList(contactList.contacts);
 
         scan1.close();
-
     }
 }
