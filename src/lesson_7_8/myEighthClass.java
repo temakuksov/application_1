@@ -14,8 +14,12 @@ public class myEighthClass {
         int n1 = getInt();
         int n2 = getInt();
         char op = getOperation();
-        calc(n1, n2, op);
-
+        Object res = calc(n1, n2, op);
+        if (res != null) {
+            System.out.println("Результат: " + n1 + " " + op + " " + n2 + " = " + res);
+        } else {
+            System.out.println("Не верно указано действие!");
+        }
     }
 
     // Задача 1
@@ -78,16 +82,25 @@ public class myEighthClass {
         }
     }
 
-    public static void calc(int x, int y, char operand) {
-        double res = 0;
+    public static Object calc(int x, int y, char operand) {
         switch (operand) {
-            case '+' -> res = x + y;
-            case '-' -> res = x - y;
-            case '*' -> res = x * y;
-            case '/' -> res = (double) x / y;
-            default -> System.out.println("Не верно указано действие!");
+            case '+' -> {
+                return x + y;
+            }
+            case '-' -> {
+                return x - y;
+            }
+            case '*' -> {
+                return x * y;
+            }
+            case '/' -> {
+                return (double) x / y;
+            }
+            default -> {
+                return null;
+            }
         }
-        System.out.println("Результат " + x + " " + operand + " " + y + " = " + res);
+
     }
 
 }
