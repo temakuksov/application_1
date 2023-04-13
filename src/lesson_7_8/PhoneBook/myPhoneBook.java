@@ -38,6 +38,7 @@ public class myPhoneBook {
         System.out.print("Введите имя контакта для удаления: ");
         String delName = scan1.nextLine();
         contactList.deleteContact(delName);
+        System.out.println();
         contactList.printContactList(contactList.contacts);
 
         //проверка редактирования контакта
