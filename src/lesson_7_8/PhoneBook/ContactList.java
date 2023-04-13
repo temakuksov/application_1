@@ -28,6 +28,7 @@ public class ContactList {
 
     public Contact searchContact(String nameOfContact) {
         int i = 0;
+        boolean unSearched = true;
         while (contacts[i] != null) {
             if (contacts[i].name.equalsIgnoreCase(nameOfContact)) {
                 return contacts[i];
@@ -57,11 +58,13 @@ public class ContactList {
     }
 
     public Contact editContact(String searchName, String newNameOfContact) {
-        for (Contact contact : contacts) {
-            if (contact.getName().equalsIgnoreCase(searchName)) {
-                contact.setName(newNameOfContact);
-                break;
+        int i = 0;
+        while (contacts[i] != null) {
+            if (contacts[i].getName().equalsIgnoreCase(searchName)) {
+                contacts[i].setName(newNameOfContact);
+                return contacts[i];
             }
+            i++;
         }
         return null;
     }

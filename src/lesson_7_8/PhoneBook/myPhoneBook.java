@@ -27,12 +27,11 @@ public class myPhoneBook {
         //проверка поиска контакта по имени
         System.out.print("Введите имя контакта для поиска: ");
         String searchName = scan1.nextLine();
-        Contact findContact;
-        findContact = contactList.searchContact(searchName);
+        Contact findContact = contactList.searchContact(searchName);
         if (findContact != null) {
-            System.out.println("Найден контакт: "+findContact.name+" "+findContact.phoneNumber+" "+findContact.email);
+            System.out.println("Найден контакт: " + findContact.name + " " + findContact.phoneNumber + " " + findContact.email);
         } else {
-            System.out.println("Контакт с именем "+searchName+" не найден!");
+            System.out.println("Контакт с именем " + searchName + " не найден!");
         }
 
         //проверка удаление контакта по имени
@@ -46,7 +45,12 @@ public class myPhoneBook {
         String editName = scan1.nextLine();
         System.out.print("Введите имя контакта, на которое нужно заменить: ");
         String editNewName = scan1.nextLine();
-        contactList.editContact(editName, editNewName);
+        Contact editContact = contactList.editContact(editName, editNewName);
+        if (editContact != null) {
+            System.out.println("Найден контакт: " + editContact.name + " " + editContact.phoneNumber + " " + editContact.email);
+        } else {
+            System.out.println("Контакта с именем " + searchName + " нет! Править нечего.");
+        }
         contactList.printContactList(contactList.contacts);
 
         scan1.close();
