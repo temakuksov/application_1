@@ -23,9 +23,29 @@ public class myDisk {
         this.year = year;
     }
 
+    public static void listOfDisks (myDisk[] disks){
+        System.out.println("Коллекция дисков:");
+        for (myDisk diskFromBox : disks) {
+            if (diskFromBox != null) {
+                System.out.println(diskFromBox.toString());
+            }
+        }
+    }
+    public static myDisk minYearDisk(myDisk[] disks) {
+        myDisk mYrDisk = disks[0];
+        for (myDisk eachDisk : disks) {
+            if (eachDisk != null) {
+                if (mYrDisk.getYear() > eachDisk.getYear()) {
+                    mYrDisk = eachDisk;
+                }
+            }
+        }
+        return mYrDisk;
+    }
+
     @Override
     public String toString() {
-        return "Disk{" + "name='" + name + '\'' + ", year=" + year + "}";
+        return "Disk {" + "name='" + name + '\'' + ", year=" + year + "}";
     }
 
 }
