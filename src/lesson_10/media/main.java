@@ -1,9 +1,4 @@
-package lesson_10;
-
-import lesson_10.media.myDisk;
-import lesson_10.media.myAudioDisk;
-import lesson_10.media.myVideoDisk;
-
+package lesson_10.media;
 
 public class main {
     public static void main(String[] args) {
