@@ -3,43 +3,7 @@ package lesson_10;
 import java.sql.SQLOutput;
 
 public class myTenthClass {
-    // кличка животного
-    private String nName;
-    private String food;
-    private String location;
+    public static void main(String[] args) {
 
-    public void setnName(String nName) {
-        this.nName = nName;
     }
-
-    public void setFood(String food) {
-        this.food = food;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public String getnName() {
-        return nName;
-    }
-
-    public String getFood() {
-        return food;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void makeNoise() {
-    }
-
-    public void eat() {
-    }
-
-    public void sleep() {
-        System.out.println();
-    }
-
 }
