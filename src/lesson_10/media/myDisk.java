@@ -1,4 +1,4 @@
-package lesson_10;
+package lesson_10.media;
 
 public class myDisk {
     private String name;

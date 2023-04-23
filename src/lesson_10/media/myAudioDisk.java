@@ -1,4 +1,4 @@
-package lesson_10;
+package lesson_10.media;
 
 public class myAudioDisk  extends myDisk{
     // класс музыкальных альбомов (название альбома, исполнитель, год издания, количество треков)
