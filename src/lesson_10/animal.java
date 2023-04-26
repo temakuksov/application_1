@@ -6,7 +6,7 @@ public class animal {
     private String food;
     private String location;
 
-    public void setnName(String nName) {
+    public void setNName(String nName) {
         this.nName = nName;
     }
 
@@ -18,7 +18,7 @@ public class animal {
         this.location = location;
     }
 
-    public String getnName() {
+    public String getNName() {
         return nName;
     }
 
@@ -37,7 +37,17 @@ public class animal {
     }
 
     public void sleep() {
-        System.out.println();
+        System.out.printf("%s спит!\n", getNName());
+    }
+
+    public String kindOfAnimal (animal pet){
+        if (pet instanceof cat) {
+            return "кошка";
+        } else if (pet instanceof dog) {
+            return "собака";
+        } else {
+            return "лошадь";
+        }
     }
 
 }

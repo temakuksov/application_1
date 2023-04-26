@@ -2,10 +2,10 @@ package lesson_10;
 
 public class dog extends animal{
     // приносит палку
-    private boolean isBringsAStick;
+    private boolean bringsAStick;
 
     public boolean isBringsAStick() {
-        return isBringsAStick;
+        return bringsAStick;
     }
 
     @Override
@@ -15,12 +15,12 @@ public class dog extends animal{
 
     @Override
     public void makeNoise(){
-        System.out.printf("Собака %S лает (гав-гав!)", getnName());
+        System.out.printf("Собака %S лает (гав-гав!)\n", getNName());
     }
 
     @Override
     public void eat(){
-        System.out.printf("Собака %S ест %s",getnName(),getFood());
+        System.out.printf("Собака %S ест %s\n",getNName(),getFood());
     }
 
 }
