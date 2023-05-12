@@ -12,6 +12,28 @@ public class Main {
         // Имя: Катя, пол: женский, возраст: 55
         // Имя: Игорь, пол: мужской, возраст: 2, отец: Михаил, мать: Аня
 
+        // дедушка
+        Human ivan = new Human();
+        ivan.setName("Иван Николаевич");
+        ivan.setAge(60);
+        ivan.setGend(true);
+        // бабушка
+        Human olga = new Human();
+        olga.setName("Ольга Валерьевна");
+        olga.setAge(58);
+        olga.setGend(false);
+
+        // дедушка
+        Human pavel = new Human();
+        pavel.setName("Павел Петрович");
+        pavel.setAge(60);
+        pavel.setGend(true);
+        // бабушка
+        Human irina = new Human();
+        irina.setName("Ольга Валерьевна");
+        irina.setAge(58);
+        irina.setGend(false);
+
 
     }
 }
