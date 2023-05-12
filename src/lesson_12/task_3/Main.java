@@ -26,14 +26,33 @@ public class Main {
         // дедушка
         Human pavel = new Human();
         pavel.setName("Павел Петрович");
-        pavel.setAge(60);
+        pavel.setAge(62);
         pavel.setGend(true);
         // бабушка
         Human irina = new Human();
-        irina.setName("Ольга Валерьевна");
-        irina.setAge(58);
+        irina.setName("Ирина Владимировна");
+        irina.setAge(59);
         irina.setGend(false);
+        // отец
+        Human sergei = new Human("Сергей Иванович", true, 37, ivan, olga);
+        // мать
+        Human sveta = new Human("Светлана Павловна", true, 35, pavel, irina);
+        // дети
+        Human egor = new Human("Егор Сергеевич", true, 7, sergei, sveta);
+        Human katya = new Human("Екатерина Сергеевна", false, 5, sergei, sveta);
+        Human misha = new Human("Михаил Сергеевич", false, 3, sergei, sveta);
 
-
+        System.out.println("Родители отца:");
+        System.out.println(ivan);
+        System.out.println(olga);
+        System.out.println("Родители матери:");
+        System.out.println(pavel);
+        System.out.println(irina);
+        System.out.println(" Отец:");
+        System.out.println(sergei);
+        System.out.println(" Мать:");
+        System.out.println(sveta);
+        System.out.println("  Дети:");
+        System.out.println(egor+"\n"+katya+"\n"+misha);
     }
 }

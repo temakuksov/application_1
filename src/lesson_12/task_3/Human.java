@@ -61,9 +61,15 @@ public class Human {
 
     @Override
     public String toString() {
-        return "Имя: " + name +", пол:" + (gend ? " мужской" : " женский") +
-               ", возраст: " + age + ", отец: " + father.name + ", мать: " + mother.name + '}';
-
+        String str = "Имя: " + name + ", пол:" + (gend ? " мужской" : " женский") +
+                ", возраст: " + age;
+        if (father != null) {
+             str = str.concat(", отец: " + father.name);
+        }
+        if (mother != null) {
+            str = str.concat(", мать: " + mother.name);
+        }
+        return str;
     }
 
 }
