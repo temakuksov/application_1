@@ -7,7 +7,7 @@ public class DeckOfCardsImpl implements DeckOfCards {
     Card[] cards = new Card[52];
 
     public DeckOfCardsImpl() {
-
+        //
     }
 
     @Override
