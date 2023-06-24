@@ -18,6 +18,6 @@ public class CardImpl implements Card {
 
     @Override
     public int getCard() {
-        return Card;
+        return value;
     }
 }
