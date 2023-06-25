@@ -19,11 +19,13 @@ public class Task04 {
         Scanner scan = new Scanner(System.in);
 
         for (int i = 3; i < 13; i++) {
-            System.out.printf("Введите %s-ю строку: ", i + 1);
-            arrList.add(scan.nextLine());
+            System.out.printf("Введите 1-ю строку (осталось: %s): ", 13-i);
+            arrList.add(0, scan.nextLine());
         }
 
-
-        int min = arrList.get(0).length();
+        System.out.println("Итоговая коллекция строк:");
+        for (String st : arrList) {
+            System.out.println(st);
+        }
     }
 }
