@@ -1,7 +1,6 @@
-package lesson_14;
+package lesson_14.homework;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class Task01 {
     public static void main(String[] args) {
@@ -12,7 +11,7 @@ public class Task01 {
         // 3. Выведи его размер на экран.
         // 4. Используя цикл выведи его содержимое на экран, каждое значение с новой строки.
 
-        Collection<String> arr = new ArrayList<>();
+        ArrayList<String> arr = new ArrayList<>();
         arr.add("Строка Тест1");
         arr.add("Строка Тест2");
         arr.add("Строка Тест3");
