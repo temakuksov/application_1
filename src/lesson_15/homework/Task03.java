@@ -1,10 +1,18 @@
 package lesson_15.homework;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 
 public class Task03 {
+    public static void fix(ArrayList<String> strList) {
+        for (int i = 0; i < strList.size(); i++){
+            if (strList.get(i).contains("р") && !strList.get(i).contains("л")) {
+                strList.remove(i);
+            }
+            if (strList.get(i).contains("л")) {
+                strList.add(i, strList.get(i));
+            }
+        }
+    }
     public static void main(String[] args) {
         //  Задача 3:
         //  1. Создай список слов, заполни его самостоятельно.
@@ -22,24 +30,11 @@ public class Task03 {
         strings.add("акция");
         strings.add("рация");
 
-        strings = fix(strings);
+        fix(strings);
 
         for (String string : strings) {
             System.out.println(string);
         }
-    }
-
-    public static ArrayList<String> fix(ArrayList<String> strList) {
-        for (int i = 0; i < strList.size(); i++){
-            if (strList.get(i).contains("р") && !strList.get(i).contains("л")) {
-                strList.remove(i);
-            }
-            if (strList.get(i).contains("л")) {
-                strList.add(i, strList.get(i));
-                i++;
-            }
-        }
-        return strList;
     }
 
 }
