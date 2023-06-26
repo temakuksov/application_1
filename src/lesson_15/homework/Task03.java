@@ -3,16 +3,19 @@ package lesson_15.homework;
 import java.util.ArrayList;
 
 public class Task03 {
-    public static void fix(ArrayList<String> strList) {
-        for (int i = 0; i < strList.size(); i++){
-            if (strList.get(i).contains("р") && !strList.get(i).contains("л")) {
-                strList.remove(i);
+    public static ArrayList<String> fix(ArrayList<String> strList) {
+        ArrayList<String> resList = new ArrayList<>();
+        for (String s : strList) {
+            if (!s.contains("р")) {
+                resList.add(s);
             }
-            if (strList.get(i).contains("л")) {
-                strList.add(i, strList.get(i));
+            if (!s.contains("p") && s.contains("л")) {
+                resList.add(s);
             }
         }
+        return resList;
     }
+
     public static void main(String[] args) {
         //  Задача 3:
         //  1. Создай список слов, заполни его самостоятельно.
@@ -27,10 +30,10 @@ public class Task03 {
         strings.add("стоп");
         strings.add("ралли");
         strings.add("зола");
-        strings.add("акция");
         strings.add("рация");
+        strings.add("акция");
 
-        fix(strings);
+        strings = fix(strings);
 
         for (String string : strings) {
             System.out.println(string);
