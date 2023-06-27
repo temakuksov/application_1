@@ -21,7 +21,7 @@ public class Solution {
         int rnd;
         Set<Integer> trSet = new TreeSet<>();
         while (trSet.size() < 20) {
-            rnd = (int) (10 * random());
+            rnd = (int) (10 * Math.random());
             trSet.add(rnd);
         }
         return trSet;
