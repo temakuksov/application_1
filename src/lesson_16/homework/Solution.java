@@ -1,10 +1,7 @@
 package lesson_16.homework;
 
-import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
-
-import static java.lang.Math.*;
 
 public class Solution {
     // Создать множество чисел(Set<Integer>), занести туда 20 различных чисел.
@@ -21,7 +18,7 @@ public class Solution {
         int rnd;
         Set<Integer> trSet = new TreeSet<>();
         while (trSet.size() < 20) {
-            rnd = (int) (10 * Math.random());
+            rnd = (int) (Math.random() * 100);
             trSet.add(rnd);
         }
         return trSet;
