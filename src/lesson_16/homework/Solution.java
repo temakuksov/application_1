@@ -1,7 +1,7 @@
 package lesson_16.homework;
 
+import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class Solution {
     // Создать множество чисел(Set<Integer>), занести туда 20 различных чисел.
@@ -16,9 +16,9 @@ public class Solution {
     public static Set<Integer> createSet() {
         // Random rnd = new Random();
         int rnd;
-        Set<Integer> trSet = new TreeSet<>();
+        Set<Integer> trSet = new LinkedHashSet<>();
         while (trSet.size() < 20) {
-            rnd = (int) (Math.random() * 100);
+            rnd = (int) (Math.random() * 50);
             trSet.add(rnd);
         }
         return trSet;
