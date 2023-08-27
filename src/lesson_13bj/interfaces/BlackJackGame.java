@@ -1,4 +1,4 @@
-package lesson_13.BJ_Game.interfaces;
+package lesson_13bj.interfaces;
 
 public interface BlackJackGame {
     // добавление игрока в игру
@@ -12,5 +12,9 @@ public interface BlackJackGame {
 
     // определение победителя и его выдача на печать
     void  printWinner();
+
+    int setCountOfPlayers();
+
+    int countAllPlayersInGame();
 
 }

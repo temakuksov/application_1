@@ -1,6 +1,6 @@
-package lesson_13.BJ_Game.entities;
+package lesson_13bj.entities;
 
-import lesson_13.BJ_Game.interfaces.Card;
+import lesson_13bj.interfaces.Card;
 
 public class CardImpl implements Card {
     private int value;
@@ -17,7 +17,12 @@ public class CardImpl implements Card {
     }
 
     @Override
-    public int getCard() {
+    public int getCardValue() {
         return value;
+    }
+
+    @Override
+    public String getCardName() {
+        return nameOfCard;
     }
 }
