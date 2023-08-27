@@ -59,7 +59,7 @@ public class GameBJ {
     private void startRound() {
 
         System.out.println("----------------------------------------");
-        System.out.println("Начинается новый раунд игры!");
+        System.out.println("|----Начинается новый раунд игры!------|");
         System.out.println("----------------------------------------");
         System.out.println("Карт в колоде " + deck.cardsLeft());
 
@@ -120,7 +120,7 @@ public class GameBJ {
             if (p.getHand().calculatedValue() > 21 && players.size() == 1) {
                 System.out.println("Игрок " + p.getName() + " проиграл. Он набрал больше 21.");
                 System.out.println("Выиграл крупье!");
-                System.out.println("_____________________________");
+                System.out.println("==========================================================");
                 startRound();
             }
         }
