@@ -1,6 +1,7 @@
 package lesson_18;
 
-import java.io.IOException;
+import org.jetbrains.annotations.Contract;
+
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -40,6 +41,11 @@ public class Solution {
         // 2) Выкинь исключение в случае некорректных данных.
         // Подсказка: если что-то не то с колесами, то это не машина!
         // Сигнатуры не менять
+        System.out.println("*----- Задача 3 -----*");
+        Car car = new Car();
+        System.out.println(car);
+        System.out.println(" ");
+
 
     }
 
@@ -49,7 +55,7 @@ public class Solution {
         return list.get(0);
     }
 
-    public static List<Integer> getIntegerList(){
+    public static List<Integer> getIntegerList() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Введите количество чисел (N>0): ");
         int numN = scan.nextInt();
@@ -110,8 +116,49 @@ public class Solution {
         animals.forEach(System.out::println);
     }
 
-
     // для задачи 3
+
+    public enum Wheel {
+        FRONT_LEFT("FL"), FRONT_RIGHT("FR"), BACK_LEFT("BL"), BACK_RIGHT("BR");
+        private final String name;
+
+        @Contract(pure = true)
+        Wheel(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+    }
+
+    public static class Car {
+        protected List<Wheel> wheels;
+
+        public List<Wheel> getWheels() {
+            return wheels;
+        }
+
+        public void setWheels(List<Wheel> wheels) {
+            this.wheels = wheels;
+        }
+
+        public Car() {
+            //init wheels here
+            try {
+                this.setWheels(Arrays.stream(loadWheelNamesFromDB()).
+                        map(Wheel::valueOf).collect(Collectors.toList()));
+            } catch (Exception ex) {
+                System.out.println("Что-то не то с колесами, это не машина!");
+            }
+        }
+
+        protected String[] loadWheelNamesFromDB() {
+            //this method returns mock data
+            return new String[]{"FRONT_LEFT", "FRONT_RIGHT", "BACK_LEFT", "BACK_RIGHT"};
+        }
+
+    }
 
 }
 
